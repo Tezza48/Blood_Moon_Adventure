@@ -11,7 +11,7 @@ public class TriggerVolumeEditor extends MonoBehaviour
 		{
 			Gizmos.color = Color.green;
 			Gizmos.DrawSphere(transform.position, 0.1f);
-	   		Gizmos.DrawWireCube(transform.position, transform.GetComponent.<Renderer>().bounds.size);
+	   		Gizmos.DrawWireCube(transform.position, transform.GetComponent.<BoxCollider>().bounds.size);
 		}
 	}
 }
