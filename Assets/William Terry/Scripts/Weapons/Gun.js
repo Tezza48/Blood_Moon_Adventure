@@ -6,6 +6,8 @@ public var barrelPoint : Transform;
 public var _lineRenderer : LineRenderer;
 
 private var lineRenderPoints : Vector3[] = new Vector3[2];
+private var cooldownShoot : float;
+private var cooldownShootMax : float = 1;
 
 function Start () {
 	_lineRenderer = GetComponent.<LineRenderer>();
@@ -13,9 +15,10 @@ function Start () {
 }
 
 function Update () {
-	if (Input.GetButton("Fire1"))
+	if ((Input.GetButtonDown("Fire1") || Input.GetAxis("Fire1") != 0) && cooldownShoot < Time.time)
 	{
 		Shoot();
+		cooldownShoot = Time.time + cooldownShootMax;
 	}
 	
 	var laser:RaycastHit;
@@ -51,6 +54,6 @@ function Shoot()
 		}
 	}
 	
-	//GetComponent.<>
+	GetComponent.<AudioSource>().Play();
 	
 }

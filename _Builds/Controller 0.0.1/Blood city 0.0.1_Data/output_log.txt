@@ -1,0 +1,38 @@
+Mono path[0] = 'D:/Users/Student/Documents/University/Year 2/Digital Scripting/Blood_Moon_Adventure/_Builds/Controller 0.0.1/Blood city 0.0.1_Data/Managed'
+Mono path[1] = 'D:/Users/Student/Documents/University/Year 2/Digital Scripting/Blood_Moon_Adventure/_Builds/Controller 0.0.1/Blood city 0.0.1_Data/Mono'
+Mono config path = 'D:/Users/Student/Documents/University/Year 2/Digital Scripting/Blood_Moon_Adventure/_Builds/Controller 0.0.1/Blood city 0.0.1_Data/Mono/etc'
+PlayerConnection initialized from D:/Users/Student/Documents/University/Year 2/Digital Scripting/Blood_Moon_Adventure/_Builds/Controller 0.0.1/Blood city 0.0.1_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55312
+Multi-casting "[IP] 192.168.1.17 [Port] 55312 [Flags] 2 [Guid] 3395793636 [EditorId] 1045168101 [Version] 1048832 [Id] WindowsPlayer(NX9836) [Debug] 0" to [225.0.0.222:54997]...
+PlayerConnection already initialized - listening to [192.168.1.17:55312]
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 950M       (ID=0x139a)
+    Vendor:   NVIDIA
+    VRAM:     1991 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\ProBuilderCore-Unity5.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\ProBuilderCore-Unity5.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\ProBuilderMeshOps-Unity5.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\ProBuilderMeshOps-Unity5.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\KDTree.dll (this message is harmless)
+Loading D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\KDTree.dll into Unity Child Domain
+Platform assembly: D:\Users\Student\Documents\University\Year 2\Digital Scripting\Blood_Moon_Adventure\_Builds\Controller 0.0.1\Blood city 0.0.1_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.161 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
