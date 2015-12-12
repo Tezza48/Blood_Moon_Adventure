@@ -10,8 +10,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         public NavMeshAgent agent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
         public Transform target; // target to aim for
-		public float mininumDistance = 3;
 		public GameObject ragdoll;
+		[Header("Will's Variables")]
+		public float mininumDistance = 4;
+		private bool aggro = false;
+		private float aggroDistance = 10;
 
         // Use this for initialization
         private void Start()
@@ -28,7 +31,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         // Update is called once per frame
         private void Update()
         {
-			if (target != null) {
+			// only aggro if player is visible and not far away
+			// RaycastHit ray;
+			if (!aggro)
+			{
+				Vector3 direction = (target.transform.position - transform.position).normalized;
+				if (Physics.Raycast(transform.position, direction, aggroDistance))
+					aggro = true;
+			}
+			if (target != null && aggro) {
 				agent.SetDestination (target.position);
 
 				Vector3 velocity = agent.desiredVelocity;
@@ -43,7 +54,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move (Vector3.zero, false, false);
 			}
-
         }
 
 

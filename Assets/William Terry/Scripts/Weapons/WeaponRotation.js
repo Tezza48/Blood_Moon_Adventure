@@ -22,7 +22,7 @@ function Update ()
 	{
 		var rotation  : Quaternion = Quaternion.LookRotation(lookPos.normalized);
 		
-		transform.rotation = rotation;
+		transform.rotation = Quaternion.Lerp(transform.rotation, rotation, 0.9);
 	}
 }
 
