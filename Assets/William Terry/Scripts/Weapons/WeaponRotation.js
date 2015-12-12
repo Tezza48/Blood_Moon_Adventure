@@ -2,12 +2,11 @@
 
 private var horizRotation: float;
 private var verticalRotation : float;
-
 private var _CameraPos : Transform;
 private var _CameraFwd : Vector3;
 
-function Update () {
-	
+function Update ()
+{
 	_CameraPos = Camera.main.transform;
 	
 	horizRotation = Input.GetAxis("Horizontal Rot");
