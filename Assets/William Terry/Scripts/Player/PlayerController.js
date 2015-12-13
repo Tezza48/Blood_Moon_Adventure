@@ -1,7 +1,9 @@
 ﻿#pragma strict
 
-function Start () {
+public static var PlayerController : PlayerController;
 
+function Start () {
+	PlayerController = this;
 }
 
 function Update () {

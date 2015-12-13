@@ -46,7 +46,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				if (Vector3.Distance (transform.position, target.transform.position) < mininumDistance) {
 					// use the values to move the character
-					target = null;
+					character.Move (Vector3.zero, false, false);
 				}
 
 				character.Move (velocity, false, false);

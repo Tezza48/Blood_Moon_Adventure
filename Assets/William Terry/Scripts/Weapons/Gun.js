@@ -1,9 +1,14 @@
 ﻿#pragma strict
 
 import UnityStandardAssets.Characters.ThirdPerson;
-
+@Header("SFX")
+public var gunshotSFX : AudioClip;
+public var clickSFX : AudioClip;
+@Header("Shooting Stuff")
 public var barrelPoint : Transform;
+@Header("Referances")
 public var _lineRenderer : LineRenderer;
+public var inventory : Inventory;
 
 private var lineRenderPoints : Vector3[] = new Vector3[2];
 private var cooldownShoot : float;
@@ -41,20 +46,31 @@ function Update () {
 
 function Shoot()
 {
-	var fwd = barrelPoint.TransformDirection (Vector3.forward);
-	
-	var gunRay : RaycastHit;
-	
-	var layers:int = 1 << 8;
-	layers = ~layers;
-	
-	if (Physics.Raycast (barrelPoint.position, fwd, gunRay, 100, layers)) {
-		if(gunRay.collider.tag == "Enemy")
-		{
-			gunRay.collider.GetComponent.<AICharacterControl>().Die();
+	if (inventory.ammo > 0)
+	{
+		var fwd = barrelPoint.TransformDirection (Vector3.forward);
+		
+		var gunRay : RaycastHit;
+		
+		var layers:int = 1 << 8;
+		layers = ~layers;
+		
+		if (Physics.Raycast (barrelPoint.position, fwd, gunRay, 100, layers)) {
+			if(gunRay.collider.tag == "Enemy")
+			{
+				gunRay.collider.GetComponent.<AICharacterControl>().Die();
+			}
 		}
+		PlaySFX(gunshotSFX);
+		inventory.ammo--;
 	}
-	
+	else
+	{
+		PlaySFX(clickSFX);
+	}	
+}
+function PlaySFX (clip : AudioClip)
+{
+	GetComponent.<AudioSource>().clip = clip;
 	GetComponent.<AudioSource>().Play();
-	
 }
