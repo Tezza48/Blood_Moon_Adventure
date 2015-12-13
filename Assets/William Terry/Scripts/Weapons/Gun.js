@@ -20,7 +20,6 @@ function Start () {
 }
 
 function Update () {
-	print(Input.GetAxis("Fire1"));
 	if ((Input.GetButtonDown("Fire1") || Input.GetAxis("Fire1") == 1) && cooldownShoot < Time.time)
 	{
 		Shoot();

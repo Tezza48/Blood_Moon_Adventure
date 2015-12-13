@@ -30,37 +30,39 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         // Update is called once per frame
         private void Update()
-        {
-			// only aggro if player is visible and not far away
-			// RaycastHit ray;
+		{
 			if (!aggro)
 			{
 				Vector3 direction = (target.transform.position - transform.position).normalized;
-				if (Physics.Raycast(transform.position, direction, aggroDistance))
-					aggro = true;
-			}
-			if (target != null && aggro) {
-				agent.SetDestination (target.position);
-
-				Vector3 velocity = agent.desiredVelocity;
-
-				if (Vector3.Distance (transform.position, target.transform.position) < mininumDistance) {
-					// use the values to move the character
-					character.Move (Vector3.zero, false, false);
+				RaycastHit ray;
+				if (Physics.Raycast(transform.position, direction, out ray))
+				{
+					if (ray.distance > mininumDistance && ray.distance < aggroDistance)
+						aggro = true;
 				}
-
-				character.Move (velocity, false, false);
-			} else {
-				// We still need to call the character's move function, but we send zeroed input as the move param.
-				character.Move (Vector3.zero, false, false);
 			}
+            if (target != null && aggro)
+            {
+                agent.SetDestination(target.position);
+
+				
+				
+                // use the values to move the character
+                character.Move(agent.desiredVelocity, false, false);
+            }
+            else
+            {
+                // We still need to call the character's move function, but we send zeroed input as the move param.
+                character.Move(Vector3.zero, false, false);
+            }
+
         }
 
 
         public void SetTarget(Transform target)
         {
             this.target = target;
-        }
+		}
 
 		public void Die ()
 		{

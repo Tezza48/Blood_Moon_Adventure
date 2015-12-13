@@ -1,20 +1,18 @@
 ﻿#pragma strict
 
-import UnityEngine.UI;
-
 @Header("Contents")
 public var ammo : int = 100;
 public var health : int = 100;
 public var healthMax: int = 100;
 public var gun : Gun;
 @Header("Referances")
-public var ammoDisplay : Text;
-public var healthDisplay : Text;
+public var ammoDisplay : UnityEngine.UI.Text;
+public var healthDisplay : UnityEngine.UI.Text;
 
 function Start () {
 	gun.inventory = this;
-	ammoDisplay = GameObject.Find("Ammo UI Display").GetComponent.<Text>();
-	healthDisplay = GameObject.Find("Health UI Display").GetComponent.<Text>();
+	ammoDisplay = GameObject.Find("Ammo UI Display").GetComponent.<UnityEngine.UI.Text>();
+	healthDisplay = GameObject.Find("Health UI Display").GetComponent.<UnityEngine.UI.Text>();
 }
 
 function Update () {
