@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-import UnityStandardAssets.Characters.ThirdPerson;
+//import UnityStandardAssets.Characters.ThirdPerson;
 @Header("SFX")
 public var gunshotSFX : AudioClip;
 public var clickSFX : AudioClip;
@@ -57,7 +57,7 @@ function Shoot()
 		if (Physics.Raycast (barrelPoint.position, fwd, gunRay, 100, layers)) {
 			if(gunRay.collider.tag == "Enemy")
 			{
-				gunRay.collider.GetComponent.<AICharacterControl>().Die();
+				//gunRay.collider.GetComponent.<AICharacterControl>().Die();
 			}
 		}
 		PlaySFX(gunshotSFX);
